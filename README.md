@@ -1,10 +1,6 @@
 # Hotel Reservation :ticket:
  
-  
- 
 Application responsible to manage hotel reservations
- 
-  
  
 ## Table of Contents
  
@@ -15,8 +11,6 @@ Application responsible to manage hotel reservations
 -  [Features :rocket:](#features-rocket)
  
 -  [API - Endpoints :satellite:](#api---endpoints-satellite)
- 
-- [GET /best20]
  
 -  [Requirements :wrench:](#requirements-wrench)
  
@@ -51,22 +45,15 @@ Application responsible to manage hotel reservations
  
 ## API - Endpoints :satellite:
  
-### GET /HotelRoom
- 
-- Response
- 
-```
-{
- 
-}
- 
-```
- 
+- GET /HotelRoom: Retrives a list of rooms
+- GET /HotemReservation: Retrieves the Reservation based in the `Id` 
+- POST /HotemReservation: Creates a new Reservation
+- PATCH /HotemReservation: Updates a Reservation 
+- DELETE /HotemReservation: Cancels a Reservation
   
+PS: For more information about the endpoints, please execute the application and access the url `http://localhost:5000/swagger`
  
 ## Requirements :wrench:
- 
-  
  
 - Visual Studio 2019 ([download](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16))
  
@@ -79,42 +66,25 @@ Application responsible to manage hotel reservations
 - SQL Server Management Studio ([download](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x409))
  
   
- 
 ## Installation :gear:
- 
-  
  
 Open the cmd and execute: ```git clone https://github.com/wbail/hotel-reservation```
  
-  
- 
 ## Usage :building_construction:
- 
   
- 
 1. Open the Visual Studio 2019
 2. Open the solution
 3. Execute the application
 4. Open Postman and import the collection `Hotel.postman_collection.json` and the environment `Hotel - Dev.postman_environment.json`. See the video tutorial inside the Postman folder.
 5. When the application starts, the application seeds the database with data.
  
- PS: For swagger usage edit the `Properties\launchSettings.json` adding the `"launchBrowser": true` inside the `Hotel.Reservation` property
- 
 ## Architecture :triangular_ruler:
  
-  
- 
-![Architecture](architecture.png)
- 
-  
+![Architecture](architecture.png) 
  
 ## Support :construction_worker:
  
-  
- 
-In case of features or bugs, please contact me or open a PR
- 
-  
+In case of features or bugs, please contact me or open a PR 
  
 ### Developer(s)
  
