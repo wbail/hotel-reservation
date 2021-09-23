@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
+  
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hotel.Reservation.App.Messages\Hotel.Reservation.App.Messages.csproj" />
+    <ProjectReference Include="..\Hotel.Reservation.App.Services\Hotel.Reservation.App.Services.csproj" />
+    <ProjectReference Include="..\Hotel.Reservation.Infra.CrossCutting.DI\Hotel.Reservation.Infra.CrossCutting.DI.csproj" />
+  </ItemGroup>
+
+</Project>

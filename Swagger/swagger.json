@@ -1,0 +1,340 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Hotel Reservation - Microservice",
+      "version": "v1"
+    },
+    "paths": {
+      "/api/v1/HotelReservation": {
+        "delete": {
+          "tags": [
+            "HotelReservation"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HotelReservationAppResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProblemDetails"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "get": {
+          "tags": [
+            "HotelReservation"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HotelReservationAppResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProblemDetails"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "patch": {
+          "tags": [
+            "HotelReservation"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelReservationAppRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HotelReservationAppResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProblemDetails"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "HotelReservation"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelReservationAppRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HotelReservationAppResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProblemDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/HotelReservation/reservation-by-userid": {
+        "get": {
+          "tags": [
+            "HotelReservation"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HotelReservationAppResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProblemDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/HotelRoom": {
+        "get": {
+          "tags": [
+            "HotelRoom"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HotelRoomAppResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "HotelReservation": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "userId": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "roomId": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "startDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "additionalProperties": false
+        },
+        "HotelReservationAppRequest": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "userId": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "roomId": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "startDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "endDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "additionalProperties": false
+        },
+        "HotelReservationAppResponse": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "nullable": true
+            },
+            "reservationStatus": {
+              "type": "boolean"
+            },
+            "hotelReservation": {
+              "$ref": "#/components/schemas/HotelReservation"
+            }
+          },
+          "additionalProperties": false
+        },
+        "HotelRoomAppResponse": {
+          "type": "object",
+          "properties": {
+            "rooms": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Room"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "ProblemDetails": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "nullable": true
+            },
+            "title": {
+              "type": "string",
+              "nullable": true
+            },
+            "status": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "detail": {
+              "type": "string",
+              "nullable": true
+            },
+            "instance": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "additionalProperties": { }
+        },
+        "Room": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "isAvailable": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }

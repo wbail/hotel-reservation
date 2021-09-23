@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hotel.Reservation.Infra.Data.Repositories\Hotel.Reservation.Infra.Data.Repositories.csproj" />
+    <ProjectReference Include="..\Hotel.Reservation.Infra.Data\Hotel.Reservation.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

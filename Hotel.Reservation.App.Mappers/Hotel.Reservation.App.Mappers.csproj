@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hotel.Reservation.App.Messages\Hotel.Reservation.App.Messages.csproj" />
+    <ProjectReference Include="..\Hotel.Reservation.Models\Hotel.Reservation.Models.csproj" />
+  </ItemGroup>
+
+</Project>
