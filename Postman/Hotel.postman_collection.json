@@ -1,0 +1,166 @@
+{
+    "info": {
+           "_postman_id": "f1bdf471-bfd0-46b7-a25a-3c0fbb29b467",
+           "name": "Hotel",
+           "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+           {
+                  "name": "Reservation",
+                  "item": [
+                         {
+                                "name": "Create Reservation",
+                                "request": {
+                                        "method": "POST",
+                                        "header": [
+                                               {
+                                                      "key": "Content-Type",
+                                                      "name": "Content-Type",
+                                                      "value": "application/json",
+                                                      "type": "text"
+                                               }
+                                        ],
+                                        "body": {
+                                               "mode": "raw",
+                                               "raw": "{\r\n  \"userId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"roomId\": \"<INSERT HERE THE ROOMID>\",\r\n  \"startDate\": \"2021-09-23T17:01:32.244Z\",\r\n  \"endDate\": \"2021-09-25T17:01:32.244Z\"\r\n}"
+                                        },
+                                        "url": {
+                                               "raw": "{{host}}:{{port}}/{{api}}/{{version}}/HotelReservation",
+                                               "host": [
+                                                      "{{host}}"
+                                               ],
+                                               "port": "{{port}}",
+                                               "path": [
+                                                      "{{api}}",
+                                                      "{{version}}",
+                                                      "HotelReservation"
+                                               ]
+                                        }
+                                },
+                                "response": []
+                         },
+                         {
+                                "name": "Get Reservation",
+                                "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                },
+                                "request": {
+                                        "method": "GET",
+                                        "header": [
+                                               {
+                                                      "key": "Content-Type",
+                                                      "name": "Content-Type",
+                                                      "value": "application/json",
+                                                      "type": "text"
+                                               }
+                                        ],
+                                        "body": {
+                                               "mode": "raw",
+                                               "raw": "\"<INSERT HERE THE HOTEL RESERVATION ID>\""
+                                        },
+                                        "url": {
+                                               "raw": "{{host}}:{{port}}/{{api}}/{{version}}/HotelReservation",
+                                               "host": [
+                                                      "{{host}}"
+                                               ],
+                                               "port": "{{port}}",
+                                              "path": [
+                                                      "{{api}}",
+                                                      "{{version}}",
+                                                      "HotelReservation"
+                                               ]
+                                        }
+                                },
+                                "response": []
+                         },
+                         {
+                                "name": "Update Reservation",
+                                "request": {
+                                        "method": "PATCH",
+                                        "header": [
+                                               {
+                                                      "key": "Content-Type",
+                                                      "name": "Content-Type",
+                                                      "value": "application/json",
+                                                      "type": "text"
+                                               }
+                                        ],
+                                        "body": {
+                                               "mode": "raw",
+                                               "raw": "{\r\n  \"id\": \"<INSERT HERE THE HOTEL RESERVATION ID>\",\r\n  \"userId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"roomId\": \"<ROOM ID>\",\r\n  \"startDate\": \"2021-09-23T17:01:32.244\",\r\n  \"endDate\": \"2021-09-24T17:01:32.244\"\r\n}"
+                                        },
+                                        "url": {
+                                               "raw": "{{host}}:{{port}}/{{api}}/{{version}}/HotelReservation",
+                                               "host": [
+                                                      "{{host}}"
+                                               ],
+                                               "port": "{{port}}",
+                                               "path": [
+                                                      "{{api}}",
+                                                      "{{version}}",
+                                                      "HotelReservation"
+                                               ]
+                                        }
+                                },
+                                "response": []
+                         },
+                         {
+                                "name": "Cancel Reservation",
+                                "request": {
+                                        "method": "DELETE",
+                                        "header": [
+                                               {
+                                                      "key": "Content-Type",
+                                                      "name": "Content-Type",
+                                                      "value": "application/json",
+                                                      "type": "text"
+                                               }
+                                        ],
+                                        "body": {
+                                               "mode": "raw",
+                                               "raw": "\"<INSERT HERE THE HOTEL RESERVATION ID>\""
+                                        },
+                                        "url": {
+                                               "raw": "{{host}}:{{port}}/{{api}}/{{version}}/HotelReservation",
+                                               "host": [
+                                                      "{{host}}"
+                                               ],
+                                               "port": "{{port}}",
+                                               "path": [
+                                                      "{{api}}",
+                                                      "{{version}}",
+                                                      "HotelReservation"
+                                               ]
+                                        }
+                                },
+                                "response": []
+                         }
+                  ]
+           },
+           {
+                  "name": "Room",
+                  "item": [
+                         {
+                                "name": "Get Available Rooms",
+                                "request": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                               "raw": "{{host}}:{{port}}/{{api}}/{{version}}/HotelRoom",
+                                               "host": [
+                                                      "{{host}}"
+                                               ],
+                                               "port": "{{port}}",
+                                               "path": [
+                                                      "{{api}}",
+                                                      "{{version}}",
+                                                      "HotelRoom"
+                                               ]
+                                        }
+                                },
+                                "response": []
+                         }
+                  ]
+           }
+    ]
+}
